@@ -3,6 +3,7 @@ resource "aws_s3_bucket" "main" {
   # Bucket names must be globally unique — using account ID to ensure this
   bucket = "${var.project_name}-${var.environment}-${var.account_id}"
   force_destroy = true
+  force_destroy = true
 
   tags = {
     Name        = "${var.project_name}-bucket"
